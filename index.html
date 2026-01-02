@@ -6,79 +6,80 @@
     <title>Thư gửi anh</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body { background: #fce4ec; font-family: 'Nunito', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; overflow-x: hidden; }
-        
-        /* Màn hình khóa */
-        #lock-screen { text-align: center; z-index: 10001; }
-        input { padding: 12px; border-radius: 25px; border: 1px solid #d81b60; outline: none; text-align: center; }
-        button { padding: 12px 25px; border-radius: 25px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 10px; }
-
-        /* Nội dung chính */
-        #main-content { display: none; max-width: 600px; width: 90%; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 40px 0; }
-        img { width: 100%; border-radius: 15px; margin: 15px 0; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.2rem; margin-top: 20px; }
-        .heart { position: fixed; top: -20px; color: #ff80ab; font-size: 20px; pointer-events: none; animation: fall linear forwards; }
+        body { background: #fce4ec; font-family: 'Nunito', sans-serif; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        #lock-screen { text-align: center; padding: 20px; }
+        input { padding: 12px; border-radius: 25px; border: 1px solid #d81b60; text-align: center; outline: none; width: 200px; }
+        button { padding: 12px 25px; border-radius: 25px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 15px; font-weight: bold; box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3); }
+        #main-content { display: none; max-width: 600px; width: 90%; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 40px 10px; }
+        img { width: 100%; border-radius: 15px; margin: 15px 0; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+        p { text-align: justify; line-height: 1.8; font-size: 1.05rem; color: #444; margin-bottom: 15px; }
+        .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.4rem; margin-top: 30px; }
+        .heart { position: fixed; top: -20px; color: #ff80ab; font-size: 20px; pointer-events: none; animation: fall linear forwards; z-index: 999; }
         @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
     </style>
 </head>
 <body>
 
     <div id="lock-screen">
-        <h2 style="color: #d81b60;">Trang web được bảo vệ</h2>
-        <p>Vui lòng nhập mật khẩu để xem thư</p>
-        <input type="password" id="passInput" placeholder="Nhập mã vào đây...">
+        <h2 style="color: #d81b60;">Mở thư từ Changbe...</h2>
+        <input type="password" id="passInput" placeholder="Nhập mật khẩu (123)...">
         <br>
         <button onclick="checkPass()">Mở thư ❤️</button>
     </div>
 
-    <audio id="bgMusic" loop><source src="music.mp3" type="audio/mpeg"></audio>
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
 
     <div id="main-content">
-        <img src="bia.jpg">
+        <img src="bia.jpg.jpg">
         <h1 style="text-align: center; color: #d81b60;">Chuyện yêu của anh và em</h1>
         
         <p>Lần đầu tiên viết cái gì đó dài dài cho anh. Em là người thích viết thư bày tỏ tâm sự lắm, nhưng với anh thì em lại chưa bao giờ dám làm vậy. Vì em sợ niềm vui mong manh hiện tại sẽ vỡ tan tành.</p>
-        <p>Hơn 8 tháng mình bên nhau, với em đầy ắp kỷ niệm. Không chỉ là đồng hành trong những chuyến rong chơi, mà còn là xây dựng những thói quen lành mạnh...</p>
+        <p>Hơn 8 tháng mình bên nhau, với em đầy ắp kỷ niệm. Không chỉ là đồng hành trong những chuyến rong chơi, mà còn là xây dựng những thói quen lành mạnh. Ôm và hôn thật nhiều, nói chúc ngủ ngon, nấu bữa cơm nhà, cúi người cảm ơn vì bữa ăn, gửi ảnh món ăn, nuôi mèo béo, tập đàn, chơi game, vắt thật kiệt. Em coi đó là nền tảng cho một mối quan hệ gắn bó lâu dài, em không mong cầu gì hơn thế.</p>
 
         <div class="grid">
-            <img src="anh1.jpg"> <img src="anh2.jpg">
-            <img src="anh3.jpg"> <img src="anh4.jpg">
-            <img src="anh5.jpg"> <img src="anh6.jpg">
-            <img src="anh7.jpg"> <img src="anh8.jpg">
+            <img src="anh1.jpg.jpg"> <img src="anh2.jpg.jpg">
+            <img src="anh3.jpg.jpg"> <img src="anh4.jpg.jpg">
+            <img src="anh5.jpg.jpg"> <img src="anh6.jpg.jpg">
+            <img src="anh7.jpg.jpg"> <img src="anh8.jpg.jpg">
         </div>
 
-        <p>Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh...</p>
+        <p>Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh. Yêu cách con người em trở thành khi bên cạnh anh, em nhận ra mình cũng tuyệt vời thế nào, em đã trưởng thành hơn thấy rõ đó. Yêu cả cách anh cố gắng thay đổi khi bên cạnh em, dù chỉ một chút thôi, em trân trọng điều đó.</p>
+        
+        <p>Từ những câu nói vu vơ như, "em nghĩ sao về lương của hai vợ chồng", "anh muốn có con", "con mình chắc chắn răng xấu", "muốn đưa em đi hết ngóc ngách ở Hà Nội", "không phải lúc nào cũng tìm được người nói chuyện hợp", "thật may mắn vì mình tìm thấy nhau"... Khoảnh khắc đáng yêu nhất chắc là, anh xin phép em đưa người khác về nhà. Xong bị người ta hỏi dò có gì với nhau à, sao lại phải xin phép =)) Anh thấy đó, trong vô thức anh đã nhiều lần chọn em rồi.</p>
 
         <div class="grid">
-            <img src="anh9.jpg"> <img src="anh10.jpg">
-            <img src="anh11.jpg"> <img src="anh12.jpg">
-            <img src="anh13.jpg"> <img src="anh14.jpg">
+            <img src="anh9.jpg.jpg"> <img src="anh10.jpg.jpg">
+            <img src="anh11.jpg.jpg"> <img src="anh12.jpg.jpg">
+            <img src="anh13.jpg.jpg"> <img src="anh14.jpg.jpg">
         </div>
 
-        <p>Em trả anh về cuộc sống tự do của anh nhé...</p>
+        <p>Nhưng có lẽ với anh, lựa chọn không đồng nghĩa với cảm giác yêu. Cơ chế yêu của mình cũng khác nhau nữa, em nỗ lực để yêu, còn anh phải yêu mới nỗ lực. Phải sau rất lâu mình mới thẳng thắn với nhau rằng thời gian qua cả hai đều né tránh nói chuyện như nào. Vì ai cũng lờ mờ đoán được đó sẽ là hồi kết.</p>
+        <p>Em trả anh về cuộc sống tự do của anh nhé, anh chưa sẵn sàng để yêu ổn định đâu nên hãy bay nhảy nhiều vào. Rồi tuổi tác và trải nghiệm sẽ kéo anh về suy nghĩ chín chắn hơn. Em không bên anh trong bài học này được rồi, vì em cũng phải đi lối riêng của em. Em muốn là bạn đồng hành, bạn đời của một ai đó lựa chọn yêu em.</p>
 
-        <div class="grid">
-            <img src="anh15.jpg"> <img src="anh16.jpg"> <img src="anh17.jpg">
+        <div class="grid" style="grid-template-columns: repeat(3, 1fr);">
+            <img src="anh15.jpg.jpg"> <img src="anh16.jpg.jpg"> <img src="anh17.jpg.jpg">
         </div>
 
-        <p>MĐT à, em Trang yêu anh đấy hehe. Tạm biệt anh.</p>
+        <p>MĐT à, em Trang yêu anh đấy hehe. Thật sự hy vọng một ngày anh biết yêu lại, hoặc hiểu thế nào mới là yêu đúng, hoặc nhận ra là có thể anh đã từng yêu em rồi đấy. Tạm biệt anh.</p>
         <div class="signature">Changbe</div>
-        <img src="ket.jpg">
+        <img src="ket.jpg.jpg">
     </div>
 
     <script>
         function checkPass() {
             const pass = document.getElementById('passInput').value;
-            // THAY ĐỔI MẬT KHẨU Ở ĐÂY (Ví dụ: 123456)
-            if (pass === "0985092488") {
+            if (pass === "123") {
                 document.getElementById('lock-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
-                document.body.style.display = 'block'; // Trả về hiển thị bình thường
-                document.getElementById('bgMusic').play();
+                document.body.style.display = 'block'; 
+                var audio = document.getElementById('bgMusic');
+                audio.play();
                 setInterval(createHeart, 300);
             } else {
-                alert("Mật khẩu sai rồi anh ơi!");
+                alert("Sai mật khẩu rồi anh ơi!");
             }
         }
 
