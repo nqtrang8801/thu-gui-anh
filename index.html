@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyện yêu của anh và em</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <style>
+        body { background: #fce4ec; font-family: 'Nunito', sans-serif; text-align: center; padding: 20px; }
+        .box { max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        img { width: 100%; border-radius: 10px; margin: 15px 0; }
+        p { text-align: justify; line-height: 1.6; }
+        #start-btn { padding: 15px 30px; background: #d81b60; color: white; border: none; border-radius: 50px; cursor: pointer; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <button id="start-btn" onclick="start()">Bấm để mở thư ❤️</button>
+    <audio id="nhac" loop><source src="music.mp3" type="audio/mpeg"></audio>
+
+    <div class="box" id="content" style="display:none">
+        <img src="bia.jpg">
+        <h1>Chuyện yêu của anh và em</h1>
+        <pLần đầu tiên viết cái gì đó dài dài cho anh. Em là người thích viết thư bày tỏ tâm sự lắm, nhưng với anh thì em lại chưa bao giờ dám làm vậy. Vì em sợ niềm vui mong manh hiện tại sẽ vỡ tan tành.
+Hơn 8 tháng mình bên nhau, với em đầy ắp kỷ niệm. Không chỉ là đồng hành trong những chuyến rong chơi, mà còn là xây dựng những thói quen lành mạnh.  Ôm và hôn thật nhiều, nói chúc ngủ ngon, nấu bữa cơm nhà, cúi người cảm ơn vì bữa ăn, gửi ảnh món ăn, nuôi mèo béo, tập đàn, chơi game, vắt thật kiệt. Em coi đó là nền tảng cho một mối quan hệ gắn bó lâu dài, em không mong cầu gì hơn thế.
+Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh. Yêu cách con người em trở thành khi bên cạnh anh, em nhận ra mình cũng tuyệt vời thế nào, em đã trưởng thành hơn thấy rõ đó. Yêu cả cách anh cố gắng thay đổi khi bên cạnh em, dù chỉ một chút thôi, em trân trọng điều đó. Từ những câu nói vu vơ như, “em nghĩ sao về lương của hai vợ chồng”, “anh muốn có con”, “con mình chắc chắn răng xấu”, “muốn đưa em đi hết ngóc ngách ở Hà Nội”, “không phải lúc nào cũng tìm được người nói chuyện hợp”, “thật may mắn vì mình tìm thấy nhau”… Khoảnh khắc đáng yêu nhất chắc là, anh xin phép em đưa người khác về nhà. Xong bị người ta hỏi dò có gì với nhau à, sao lại phải xin phép =)) Anh thấy đó, trong vô thức anh đã nhiều lần chọn em rồi.
+Nhưng có lẽ với anh, lựa chọn không đồng nghĩa với cảm giác yêu. Cơ chế yêu của mình cũng khác nhau nữa, em nỗ lực để yêu, còn anh phải yêu mới nỗ lực. Phải sau rất lâu mình mới thẳng thắn với nhau rằng thời gian qua cả hai đều né tránh nói chuyện như nào. Vì ai cũng lờ mờ đoán được đó sẽ là hồi kết. Em trả anh về cuộc sống tự do của anh nhé, anh chưa sẵn sàng để yêu ổn định đâu nên hãy bay nhảy nhiều vào. Rồi tuổi tác và trải nghiệm sẽ kéo anh về suy nghĩ chín chắn hơn. Em không bên anh trong bài học này được rồi, vì em cũng phải đi lối riêng của em. Em muốn là bạn đồng hành, bạn đời của một ai đó lựa chọn yêu em.
+MĐT à, em Trang yêu anh đấy hehe. Thật sự hy vọng một ngày anh biết yêu lại, hoặc hiểu thế nào mới là yêu đúng, hoặc nhận ra là có thể anh đã từng yêu em rồi đấy. Tạm biệt anh.>... (Dán nội dung thư của bạn vào đây) ...</p>
+        <div id="anh-ky-niem"></div>
+        <div class="signature">Changbe</div>
+        <img src="ket.jpg">
+    </div>
+
+    <script>
+        function start() {
+            document.getElementById('nhac').play();
+            document.getElementById('content').style.display = 'block';
+            document.getElementById('start-btn').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
