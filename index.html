@@ -57,14 +57,22 @@
 
         img { width: 100%; border-radius: 15px; margin: 15px 0; display: block; cursor: zoom-in; }
         
+/* CSS PHÓNG TO ẢNH (ĐÃ SỬA LỖI MÉO HÌNH) */
         .zoomed {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0,0,0,0.9); z-index: 10000;
             display: flex; align-items: center; justify-content: center;
             cursor: zoom-out;
         }
-        .zoomed img { max-width: 95%; max-height: 95%; border-radius: 5px; }
-
+        .zoomed img { 
+            max-width: 90%; 
+            max-height: 90%; 
+            width: auto;      /* Giữ nguyên tỷ lệ chiều rộng */
+            height: auto;     /* Giữ nguyên tỷ lệ chiều cao */
+            object-fit: contain; /* Đảm bảo ảnh nằm gọn trong khung không bị méo */
+            border-radius: 8px; 
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
         p { text-align: justify; line-height: 1.7; font-size: 1.1rem; color: #444; margin-bottom: 20px; }
         .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.4rem; margin-top: 35px; }
@@ -75,9 +83,9 @@
         /* SỬA LỖI HIỂN THỊ ĐIỆN THOẠI - CĂN CHỈNH GIỐNG ẢNH 2 */
         @media (max-width: 600px) {
             #main-content {
-                width: 82% !important; /* Thu hẹp khung lại để lộ nền hồng rõ ràng */
+                width: 90% !important; /* Thu hẹp khung lại để lộ nền hồng rõ ràng */
                 padding: 20px 15px !important; 
-                margin: 20px auto !important;
+                margin: 10px auto !important;
             }
             h1 { font-size: 1.25rem !important; }
             p { font-size: 1rem !important; line-height: 1.6; }
