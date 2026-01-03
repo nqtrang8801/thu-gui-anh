@@ -12,18 +12,17 @@
             margin: 0; 
             display: flex; 
             flex-direction: column;
-            align-items: center; /* Căn giữa theo chiều ngang */
+            align-items: center; 
             justify-content: center; 
             min-height: 100vh; 
         }
         
         #lock-screen { text-align: center; padding: 20px; }
         
-        input { padding: 12px; border-radius: 25px; border: 1px solid #d81b60; text-align: center; outline: none; width: 200px; }
+        input { padding: 12px; border-radius: 25px; border: 1px solid #d81b60; text-align: center; outline: none; width: 200px; font-size: 1rem; }
         
-        button { padding: 12px 25px; border-radius: 25px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 15px; font-weight: bold; }
+        button { padding: 12px 25px; border-radius: 25px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 15px; font-weight: bold; font-size: 1rem; }
 
-        /* Khung nội dung trắng - Đã căn giữa tuyệt đối */
         #main-content { 
             display: none; 
             max-width: 600px; 
@@ -32,28 +31,46 @@
             padding: 40px; 
             border-radius: 20px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            margin: 40px auto; /* Căn giữa khung trắng */
+            margin: 40px auto; 
         }
 
         img { width: 100%; border-radius: 15px; margin: 15px 0; display: block; }
 
-        /* Lưới ảnh kỷ niệm */
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
         
         p { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #444; margin-bottom: 20px; }
         
         .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.5rem; margin-top: 40px; }
         
-        /* Hiệu ứng tim rơi */
         .heart { position: fixed; top: -20px; color: #ff80ab; font-size: 20px; pointer-events: none; animation: fall linear forwards; z-index: 999; }
         @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
+
+        /* ĐIỀU CHỈNH RIÊNG CHO ĐIỆN THOẠI */
+        @media (max-width: 600px) {
+            body {
+                justify-content: flex-start; 
+            }
+            #main-content {
+                width: 84%;       /* Lộ nền hồng 2 bên */
+                padding: 25px 18px; 
+                margin: 20px auto; 
+            }
+            h1 { font-size: 1.4rem !important; text-align: center; }
+            p { 
+                font-size: 1.2rem !important; /* Phóng to chữ theo ý bạn */
+                line-height: 1.7; 
+                margin-bottom: 18px;
+            }
+            .grid { gap: 10px; margin: 15px 0; } 
+            .signature { font-size: 1.4rem; }
+        }
     </style>
 </head>
 <body>
 
     <div id="lock-screen">
-        <h2 style="color: #d81b60;">Mở thư từ Changbe</h2>
-        <input type="password" id="passInput" placeholder="Chuyến bay đầu tiên là ngày...">
+        <h2 style="color: #d81b60;">Mở thư từ em Changbe</h2>
+        <input type="password" id="passInput" placeholder="Chuyến bay đầu tiên là ngày ...">
         <br>
         <button onclick="checkPass()">Mở thư ❤️</button>
     </div>
@@ -64,7 +81,7 @@
 
     <div id="main-content">
         <img src="anh9.jpg">
-        <h1 style="text-align: center; color: #d81b60;">Chuyện yêu của anh và em</h1>
+        <h1 style="text-align: center; color: #d81b60;">Chuyện yêu nhà mình</h1>
         
         <p>Lần đầu tiên viết cái gì đó dài dài cho anh. Em là người thích viết thư bày tỏ tâm sự lắm, nhưng với anh thì em lại chưa bao giờ dám làm vậy. Vì em sợ niềm vui mong manh hiện tại sẽ vỡ tan tành.</p>
         
@@ -78,7 +95,7 @@
         </div>
 
         <p>Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh. Yêu cách con người em trở thành khi bên cạnh anh, em nhận ra mình cũng tuyệt vời thế nào, em đã trưởng thành hơn trông thấy. Yêu cả cách anh cố gắng thay đổi khi bên cạnh em, dù chỉ một chút thôi, em trân trọng điều đó. Từ những câu nói vu vơ như, “em nghĩ sao về lương của hai vợ chồng”, “anh muốn có con”, “con mình chắc chắn răng xấu”, “muốn đưa em đi hết ngóc ngách ở Hà Nội”, “không phải lúc nào cũng tìm được người nói chuyện hợp”, “thật may mắn vì mình tìm thấy nhau”… </p>
-        <p>Đến cả những hành động mà anh chưa từng làm cho ai như đưa em đi khám bệnh, hôn em nhiều bằng cả mấy năm qua cộng lại, tập trung vào một mối duy nhất. Khoảnh khắc đáng yêu nhất chắc là lúc anh xin phép em đưa người khác về nhà. Xong bị người ta hỏi dò có gì với nhau à, sao lại phải xin phép =)) So với anh của trước kia thì những thay đổi này khá lắm đấy. Trong vô thức anh đã nhiều lần chọn em rồi, anh có biết điều đó không?</p>
+        <p>Đến cả những hành động mà anh chưa từng làm cho ai như đưa em đi khám bệnh, hôn em nhiều bằng cả mấy năm qua cộng lại, "nhà anh" thành "nhà mình", tập trung vào một mối duy nhất. Khoảnh khắc đáng yêu nhất chắc là lúc anh xin phép em đưa người khác về nhà. Xong bị người ta hỏi dò có gì với nhau à, sao lại phải xin phép =)) So với anh của trước kia thì những thay đổi này khá lắm đấy. Trong vô thức anh đã nhiều lần chọn em rồi, anh có biết điều đó không?</p>
 
         <div class="grid">
             <img src="anh11.jpg"> <img src="anh12.jpg">
@@ -105,7 +122,6 @@
     <script>
         function checkPass() {
             const pass = document.getElementById('passInput').value;
-            // Mật khẩu là 01052025 bạn nhé
             if (pass === "01052025") {
                 document.getElementById('lock-screen').style.display = 'none';
                 document.getElementById('main-content').style.display = 'block';
