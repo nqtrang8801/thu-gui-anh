@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Thư gửi anh</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -16,6 +16,8 @@
             justify-content: center; 
             min-height: 100vh; 
             overflow-x: hidden;
+            /* Chặn việc trình duyệt tự ý phóng to */
+            touch-action: pan-x pan-y;
         }
         
         #lock-screen { 
@@ -25,6 +27,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
         
         input { 
@@ -33,8 +36,9 @@
             border: 1px solid #d81b60; 
             text-align: center; 
             outline: none; 
-            width: 300px; 
+            width: 280px; 
             font-size: 1rem; 
+            max-width: 80%;
         }
         
         button { padding: 12px 25px; border-radius: 25px; background: #d81b60; color: white; border: none; cursor: pointer; margin-top: 15px; font-weight: bold; font-size: 1rem; }
@@ -42,12 +46,13 @@
         #main-content { 
             display: none; 
             max-width: 600px; 
-            width: 90%; 
+            width: 88%; /* Đảm bảo luôn có khoảng trống 2 bên */
             background: white; 
-            padding: 40px; 
+            padding: 30px; 
             border-radius: 20px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
-            margin: 40px auto; 
+            margin: 30px auto; 
+            box-sizing: border-box; /* Quan trọng để padding không làm nở khung */
         }
 
         img { width: 100%; border-radius: 15px; margin: 15px 0; display: block; cursor: zoom-in; }
@@ -60,22 +65,23 @@
         }
         .zoomed img { max-width: 95%; max-height: 95%; border-radius: 5px; }
 
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
-        p { text-align: justify; line-height: 1.8; font-size: 1.1rem; color: #444; margin-bottom: 20px; }
-        .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.5rem; margin-top: 40px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+        p { text-align: justify; line-height: 1.7; font-size: 1.1rem; color: #444; margin-bottom: 20px; }
+        .signature { text-align: right; font-weight: bold; color: #d81b60; font-size: 1.4rem; margin-top: 35px; }
         
         .heart { position: fixed; top: -20px; color: #ff80ab; font-size: 20px; pointer-events: none; animation: fall linear forwards; z-index: 999; }
         @keyframes fall { to { transform: translateY(105vh) rotate(360deg); } }
 
+        /* SỬA LỖI HIỂN THỊ ĐIỆN THOẠI - CĂN CHỈNH GIỐNG ẢNH 2 */
         @media (max-width: 600px) {
             #main-content {
-                width: 84%; 
-                padding: 25px 18px; 
-                margin: 20px auto; 
+                width: 82% !important; /* Thu hẹp khung lại để lộ nền hồng rõ ràng */
+                padding: 20px 15px !important; 
+                margin: 20px auto !important;
             }
-            h1 { font-size: 1.3rem !important; }
-            p { font-size: 1.05rem !important; line-height: 1.6; }
-            input { width: 260px; font-size: 0.9rem; }
+            h1 { font-size: 1.25rem !important; }
+            p { font-size: 1rem !important; line-height: 1.6; }
+            input { width: 240px; }
         }
     </style>
 </head>
@@ -104,13 +110,16 @@
             <img src="anh7.jpg" onclick="zoomImg(this)"> <img src="anh8.jpg" onclick="zoomImg(this)">
         </div>
 
-        <p>Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh. Yêu cách con người em trở thành khi bên cạnh anh, em nhận ra mình cũng tuyệt vời thế nào, em đã trưởng thành hơn trông thấy. Yêu cả cách anh cố gắng thay đổi khi bên cạnh em, dù chỉ một chút thôi, em trân trọng điều đó. Từ những câu nói vu vơ như, “em nghĩ sao về lương của hai vợ chồng”, “anh muốn có con”, “con mình chắc chắn răng xấu”, “muốn đưa em đi hết ngóc ngách ở Hà Nội”, “không phải lúc nào cũng tìm được người nói chuyện hợp”, “thật may mắn vì mình tìm thấy nhau”… </p>
+        <p>Suốt thời gian qua, em đã cố kìm nén nhưng rồi cũng phải thừa nhận là em yêu anh. Yêu cách con người em trở thành khi bên cạnh anh, em nhận ra mình cũng tuyệt vời thế nào, em đã trưởng thành hơn trông thấy. Yêu cả cách anh cố gắng thay đổi khi bên cạnh em, dù chỉ một chút thôi, em trân trọng điều đó. Từ những câu nói vu vơ như, “em nghĩ sao về lương của hai vợ chồng”, “anh muốn có con”, “con mình chắc chắn răng xấu”, “muốn đưa em đi hết ngóc ngách ở Hà Nội”, “không phải lúc nào cũng tìm được người nói chuyện hợp”, “thật may mắn vì mình tìm thấy nhau”… Em ghi nhớ hết.</p>
+        
         <p>Đến cả những hành động mà anh chưa từng làm cho ai như đưa em đi khám bệnh, hôn em nhiều bằng cả mấy năm qua cộng lại, "nhà anh" thành "nhà mình", tập trung vào một mối duy nhất. Khoảnh khắc đáng yêu nhất chắc là lúc anh xin phép em đưa người khác về nhà. Xong bị người ta hỏi dò có gì với nhau à, sao lại phải xin phép =)) So với anh của trước kia thì những thay đổi này khá lắm đấy. Trong vô thức anh đã nhiều lần chọn em rồi, anh có biết điều đó không?</p>
 
         <div class="grid">
             <img src="anh11.jpg" onclick="zoomImg(this)"> <img src="anh12.jpg" onclick="zoomImg(this)">
             <img src="anh13.jpg" onclick="zoomImg(this)"> <img src="anh14.jpg" onclick="zoomImg(this)">
         </div>
+        
+        <p>Nhưng có lẽ với anh, lựa chọn không đồng nghĩa với cảm giác yêu. Cơ chế yêu của mình cũng khác nhau nữa, em nỗ lực để yêu, còn anh phải yêu mới nỗ lực. Phải sau rất lâu mình mới thẳng thắn với nhau rằng thời gian qua cả hai đều né tránh nói chuyện như nào. Vì ai cũng lờ mờ đoán được đó sẽ là hồi kết.</p>
         
         <p>Em trả anh về cuộc sống tự do của anh nhé, anh chưa sẵn sàng để yêu ổn định đâu nên hãy bay nhảy nhiều vào. Rồi tuổi tác và trải nghiệm sẽ kéo anh về suy nghĩ chín chắn hơn, em tin vậy. Nhưng em không bên anh trong bài học này được rồi, vì em cũng phải đi lối riêng của em. Em muốn là bạn đồng hành, bạn đời của một ai đó lựa chọn yêu em bằng sự trưởng thành.</p>
 
